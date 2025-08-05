@@ -5,133 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <title>SMARTZISWAF</title>
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-[#F6F4F1] text-gray-800">
+<body class="bg-[#F6F4F1] text-gray-800 font-[Inter]">
  <!--Navbar-->  
- <!-- <header class="bg-white fixed w-full z-50 shadow-xl md:rounded-full">
-  <div class="container mx-auto flex justify-between items-center px-4 py-4 text-sm">
-    <div class="flex items-center gap-2">
-      <img src="images/logo.png" alt="logo" class="h-8">
-    </div>
-    <nav class="text-md md:flex gap-8 hidden">
-      <a href="#tentang" class="hover:text-[#E45C10] transition">Tentang Kami</a>
-      <a href="#fitur" class="hover:text-[#E45C10] transition">Fitur Aplikasi</a>
-      <a href="#kontak" class="hover:text-[#E45C10] transition">Kontak Kami</a>
-      <a href="#testimoni" class="hover:text-[#E45C10] transition">Testimoni</a>
-    </nav>
-    <div class="md:hidden">
-      <button id="menu-btn" class="text-[#223300] focus:outline-none">
-        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
-    </div>
-    <div id="mobile-menu" class="md:hidden fixed top-0 right-0 w-3/4 max-w-sm bg-white bg-opacity-95 z-50 flex flex-col items-start justify-start space-y-6 p-6 transform translate-x-full transition-transform duration-300 ease-in-out">
-      <button id="close-btn" class="absolute top-6 right-6 text-[#223300] focus:outline-none">
-        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-      <a href="#tentang" class="text-lg hover:text-[#E45C10] transition">Tentang Kami</a>
-      <a href="#fitur" class="text-lg hover:text-[#E45C10] transition">Fitur Aplikasi</a>
-      <a href="#kontak" class="text-lg hover:text-[#E45C10] transition">Kontak Kami</a>
-      <a href="#testimoni" class="text-lg hover:text-[#E45C10] transition">Testimoni</a>
-    </div>
-  </div>
-</header>
-
-<style>
-  header {
-    min-height: 64px;
-  }
-  #mobile-menu.open::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-  }
-  @media (max-width: 767px) {
-    header {
-      border-radius: 0;
-    }
-    #mobile-menu {
-      height: 100vh;
-      overflow-y: auto;
-    }
-  }
-</style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const menuBtn = document.getElementById('menu-btn');
-    const closeBtn = document.getElementById('close-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    if (menuBtn && mobileMenu) {
-      menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.remove('translate-x-full');
-        mobileMenu.classList.add('translate-x-0', 'open');
-      });
-      menuBtn.addEventListener('touchstart', () => {
-        mobileMenu.classList.remove('translate-x-full');
-        mobileMenu.classList.add('translate-x-0', 'open');
-      });
-    }
-
-    if (closeBtn && mobileMenu) {
-      closeBtn.addEventListener('click', () => {
-        mobileMenu.classList.remove('translate-x-0', 'open');
-        mobileMenu.classList.add('translate-x-full');
-      });
-      closeBtn.addEventListener('touchstart', () => {
-        mobileMenu.classList.remove('translate-x-0', 'open');
-        mobileMenu.classList.add('translate-x-full');
-      });
-    }
-
-    document.addEventListener('click', (e) => {
-      if (mobileMenu && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target) && mobileMenu.classList.contains('translate-x-0')) {
-        mobileMenu.classList.remove('translate-x-0', 'open');
-        mobileMenu.classList.add('translate-x-full');
-      }
-    });
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-          if (mobileMenu && mobileMenu.classList.contains('translate-x-0')) {
-            mobileMenu.classList.remove('translate-x-0', 'open');
-            mobileMenu.classList.add('translate-x-full');
-          }
-        }
-      });
-    });
-  });
-</script> -->
-
-<header class="bg-white fixed w-full z-50 rounded-full shadow-xl">
+<header class="bg-white fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-5/6 max-w-7xl rounded-full shadow-xl">
   <div class="container mx-auto flex justify-between items-center px-6 py-6 text-sm">
     <div class="flex items-center gap-2">
       <img src="images/logo.png" alt="logo" class="h-8">
     </div>
     <nav class="text-md md:flex gap-20 hidden md:visible">
-      <a href="#tentang" class="hover:text-[#E45C10] transition">Tentang Kami</a>
-      <a href="#fitur" class="hover:text-[#E45C10] transition">Fitur Aplikasi</a>
-      <a href="#kontak" class="hover:text-[#E45C10] transition">Kontak Kami</a>
-      <a href="#testimoni" class="hover:text-[#E45C10] transition">Testimoni</a>
+      <a href="#tentang" class="md:text-sm hover:text-[#E45C10] transition">Tentang Kami</a>
+      <a href="#fitur" class="md:text-sm hover:text-[#E45C10] transition">Fitur Aplikasi</a>
+      <a href="#kontak" class="md:text-sm hover:text-[#E45C10] transition">Kontak Kami</a>
+      <a href="#testimoni" class="md:text-sm hover:text-[#E45C10] transition">Testimoni</a>
     </nav>
+
+    <!-- Mobile Menu Button -->
     <div class="md:hidden">
       <button id="menu-btn" class="text-[#223300] focus:outline-none">
         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -139,6 +33,8 @@
         </svg>
       </button>
     </div>
+
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden fixed top-0 right-0 w-64 bg-white bg-opacity-95 z-50 flex flex-col items-start justify-start space-y-6 p-6 transform translate-x-full transition-transform duration-300 ease-in-out">
       <button id="close-btn" class="absolute top-6 right-6 text-[#223300] focus:outline-none">
         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -191,7 +87,7 @@
       <div class="flex flex-col lg:flex-row items-center gap-12">
         <div class="lg:w-1/2 text-center lg:text-left">
           <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-            Platform Digital Terpercaya<br class="hidden md:block" />untuk Pengelolaan
+            Platform Digital Terpercaya<br class="hidden md:block" /> untuk Pengelolaan
             <span class="text-[#29B34B]">ZIS</span><span class="text-[#F58220]">WAF</span> Masjid
           </h1>
           <p class="mt-6 text-base md:text-lg max-w-xl mx-auto lg:mx-0">
@@ -202,7 +98,7 @@
           </button>
         </div>
         <div class="lg:w-1/2 mt-12 lg:mt-0">
-          <img src="images/laptop.png" alt="Dashboard Preview" class="w-full h-auto rounded-lg shadow-lg object-cover">
+          <img src="images/laptop.webp" alt="Dashboard Preview" class="w-full h-auto object-cover">
         </div>
       </div>
 
@@ -252,50 +148,50 @@
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     <!-- Bagian Kiri -->
-    <div class="space-y-3">
-      <div class="flex items-center md:py-0 gap-2" data-aos="fade-up">
-        <div class="text-right">
+    <div class="space-y-4">
+      <div class="flex items-center md:py-0 gap-6" data-aos="fade-up">
+        <div class="text-right grow">
           <h4 class="font-bold mb-2 text-lg">Pengelolaan Data Muzakki</h4>
           <p class="text-gray-600 text-sm">Mencatat data para muzakki (wajib zakat) dan juga donatur infaq, shadaqah maupun wakaf.</p>
         </div>
-          <div class="p-2 bg-[#223300] rounded-full">
-            <img src="images/group.png" alt="fitur" class="mr-4 h-6">
+          <div class="flex items-center justify-center size-12 rounded-full shrink-0 bg-[#223300]">
+            <img src="images/group.png" alt="fitur" class="size-6 object-contain">
           </div>
       </div>
-      <div class="flex items-center md:py-0 gap-2" data-aos="fade-up">
-        <div class="text-right">
+      <div class="flex items-center md:py-0 gap-6" data-aos="fade-up">
+        <div class="text-right grow">
           <h4 class="font-bold mb-2 text-lg">Pengelolaan Data Mustahik</h4>
           <p class="text-gray-600 text-sm">Mencatat data para mustahiq (penerima zakat) dengan pengelompokan berdasarkan asnaf zakat.</p>
         </div>
-        <div class="p-2 bg-[#223300] rounded-full">
-          <img src="images/user-love.png" alt="fitur" class="mr-4 h-6">
+        <div class="flex items-center justify-center size-12 rounded-full shrink-0 bg-[#223300]">
+          <img src="images/user-love.png" alt="fitur" class="size-6 object-contain">
         </div>
       </div>
-      <div class="flex items-center md:py-0 gap-2" data-aos="fade-up">
-        <div class="text-right">
+      <div class="flex items-center md:py-0 gap-6" data-aos="fade-up">
+        <div class="text-right grow">
           <h4 class="font-bold mb-2 text-lg">Pengelolaan Data Umat</h4>
           <p class="text-gray-600 text-sm">Gabungan dari data muzakki dan data mustahiq dan juga data jama'ah lainnya.</p>
         </div>
-      <div class="p-2 bg-[#223300] rounded-full">
-        <img src="images/user-plus.png" alt="fitur" class="mr-4 h-6">
+      <div class="flex items-center justify-center size-12 rounded-full shrink-0 bg-[#223300]">
+        <img src="images/user-plus.png" alt="fitur" class="size-6 object-contain">
       </div>
       </div>
-      <div class="flex items-center md:py-0 gap-2" data-aos="fade-up">
-      <div class="text-right">
+      <div class="flex items-center md:py-0 gap-6" data-aos="fade-up">
+      <div class="text-right grow">
         <h4 class="font-bold mb-2 text-lg">Pendistribusian ZISWAF</h4>
         <p class="text-gray-600 text-sm">Mempercepat proses perhitungan pendistribusian zakat.</p>
       </div>
-      <div class="p-2 bg-[#223300] rounded-full">
-        <img src="images/money.png" alt="fitur" class="h-6">
+      <div class="flex items-center justify-center size-12 rounded-full shrink-0 bg-[#223300]">
+        <img src="images/money.png" alt="fitur" class="size-6 object-contain">
       </div>
     </div>
-    <div class="flex items-center md:py-0 gap-2" data-aos="fade-up">
-        <div class="text-right">
+    <div class="flex items-center md:py-0 gap-6" data-aos="fade-up">
+        <div class="text-right grow">
           <h4 class="font-bold mb-2 text-lg">Monitoring Pengelolaan</h4>
           <p class="text-gray-600 text-sm">Memberikan kemudahan kepada para pengurus dan stakeholders masjid untuk mengelola secara online.</p>
         </div>
-        <div class="p-2 bg-[#223300] rounded-full">
-        <img src="images/monitor.png" alt="fitur" class="mr-4 h-6">
+        <div class="flex items-center justify-center size-12 rounded-full shrink-0 bg-[#223300]">
+        <img src="images/monitor.png" alt="fitur" class="size-6 object-contain">
         </div>
       </div>
     </div>
@@ -307,38 +203,38 @@
 
     <!-- Bagian Kanan -->
     <div class="space-y-12">
-      <div class="flex items-center md:py-0 gap-2" data-aos="fade-up">
-        <div class="p-2 bg-[#223300] rounded-full">
-        <img src="images/notes.png" alt="fitur" class="h-6 w-10">
+      <div class="flex items-center md:py-0 gap-6" data-aos="fade-up">
+        <div class="flex items-center justify-center size-12 rounded-full shrink-0 bg-[#223300]">
+        <img src="images/notes.png" alt="fitur" class="size-6 object-contain">
         </div>
-        <div class="text-left mr-4">
+        <div class="text-left mr-4 grow">
           <h4 class="font-bold mb-2 text-lg">Laporan</h4>
           <p class="text-gray-600 text-sm">Rekap hasil laporan data Muzakki, Zakat non Fitrah, data Asnaf, data Cluster dan data Pembayaran Zakat.</p>
         </div>
         </div>
-      <div class="flex items-center md:py-0 gap-2" data-aos="fade-up">
-        <div class="p-2 bg-[#223300] rounded-full">
-          <img src="images/download.png" alt="fitur" class="h-6 w-10">
+      <div class="flex items-center md:py-0 gap-6" data-aos="fade-up">
+        <div class="flex items-center justify-center size-12 rounded-full shrink-0 bg-[#223300]">
+          <img src="images/download.png" alt="fitur" class="size-6 object-contain">
           </div>
-        <div class="text-left mr-4">
+        <div class="text-left mr-4 grow">
           <h4 class="font-bold mb-2 text-lg">Download Data</h4>
           <p class="text-gray-600 text-sm">Mempermudah pengurus melakukan rekap data dan juga penyajian informasi berbasis cetak.</p>
         </div>
       </div>
-      <div class="flex items-center md:py-0 gap-2" data-aos="fade-up">
-        <div class="p-2 bg-[#223300] rounded-full">
-          <img src="images/user.png" alt="fitur" class="h-6">
+      <div class="flex items-center md:py-0 gap-6" data-aos="fade-up">
+        <div class="flex items-center justify-center size-12 rounded-full shrink-0 bg-[#223300]">
+          <img src="images/user.png" alt="fitur" class="size-6 object-contain">
           </div>
-        <div class="text-left mr-4">
+        <div class="text-left mr-4 grow">
           <h4 class="font-bold mb-2 text-lg">Pengelolaan Pengguna</h4>
           <p class="text-gray-600 text-sm">Dapat diakses oleh beberapa orang sekaligus.</p>
         </div>
       </div>
-    <div class="flex items-center md:py-0 gap-2" data-aos="fade-up">
-      <div class="p-2 bg-[#223300] rounded-full">
-       <img src="images/struk.png" alt="fitur" class="h-6">
+    <div class="flex items-center md:py-0 gap-6" data-aos="fade-up">
+      <div class="flex items-center justify-center size-12 rounded-full shrink-0 bg-[#223300]">
+       <img src="images/struk.png" alt="fitur" class="size-6 object-contain">
        </div>
-      <div class="text-left mr-4">
+      <div class="text-left mr-4 grow">
         <h4 class="font-bold mb-2 text-lg">Print Struk</h4>
         <p class="text-gray-600 text-sm">Memberikan bukti tanda terima ziswaf dengan melakukan print.</p>
       </div>
@@ -361,7 +257,7 @@
 
       <!-- Kanan -->
       <div class="w-full md:w-1/2 space-y-6 text-white" data-aos="fade-left">
-        <h2 class="text-3xl md:text-4xl font-bold">Saatnya Masjid Anda 
+        <h2 class="text-3xl text-md md:text-4xl font-bold">Saatnya Masjid Anda 
           Go Digital!</h2>
         <p class="text-base md:text-lg">"Bergabunglah dengan 67+ masjid yang sudah 
           merasakan kemudahan mengelola ZISWAF 
@@ -594,19 +490,24 @@
 
   <!-- CTA -->
 <section class="bg-gradient-to-r from-[#4B5D16] to-[#223300] text-white text-center py-24 sm:pd-12 rounded-b-3xl" id="kontak">
-  <h3 class="text-[40px] font-bold" data-aos="fade-up">Siap Transformasi Digital Masjid Anda?</h3>
-  <p class="text-[35px]" data-aos="fade-up">Segera isi form pendaftaran. <strong>GRATIS!</strong></p>
+  <h3 class="text-[40px] md:text-md font-bold" data-aos="fade-up">Siap Transformasi Digital Masjid Anda?</h3>
+  <p class="text-[35px] md:text-md" data-aos="fade-up">Segera isi form pendaftaran. <strong>GRATIS!</strong></p>
   <button class="bg-gradient-to-r from-[#F2B635] to-[#E45C10] mt-6 hover:scale-105 text-white px-6 py-4 rounded-lg font-semibold shadow-xl">
     Daftar Sekarang →
   </button>
 </section>
 
 <!-- Button kembali ke atas -->
-<a href="#tentang" id="back-to-top" class="fixed bottom-10 right-10 bg-[#E45C10] text-white p-3 rounded-full shadow-lg hover:bg-[#F2B635] transition-colors hidden" title="Kembali ke Atas">
-  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <a href="#tentang" id="back-to-top" class="fixed bottom-3 right-3 sm:bottom-6 sm:right-6 bg-[#E45C10] text-white p-2 sm:p-3 rounded-full shadow-lg hover:bg-[#F2B635] transition-colors hidden z-40" title="Kembali ke Atas">
+  <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
   </svg>
 </a>
+<!-- <a href="#tentang" id="back-to-top" class="fixed bottom-10 right-10 bg-[#E45C10] text-white p-3 rounded-full shadow-lg hover:bg-[#F2B635] transition-colors hidden" title="Kembali ke Atas">
+  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+  </svg>
+</a> -->
 
   <!-- Footer -->
   <footer class="bg-[#F6F4F1] py-20 pb-16">
@@ -637,3 +538,112 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/main.js"></script>
 </html>
+
+
+<!-- <header class="bg-white fixed w-full z-50 shadow-xl md:rounded-full">
+  <div class="container mx-auto flex justify-between items-center px-4 py-4 text-sm">
+    <div class="flex items-center gap-2">
+      <img src="images/logo.png" alt="logo" class="h-8">
+    </div>
+    <nav class="text-md md:flex gap-8 hidden">
+      <a href="#tentang" class="hover:text-[#E45C10] transition">Tentang Kami</a>
+      <a href="#fitur" class="hover:text-[#E45C10] transition">Fitur Aplikasi</a>
+      <a href="#kontak" class="hover:text-[#E45C10] transition">Kontak Kami</a>
+      <a href="#testimoni" class="hover:text-[#E45C10] transition">Testimoni</a>
+    </nav>
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-[#223300] focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden fixed top-0 right-0 w-3/4 max-w-sm bg-white bg-opacity-95 z-50 flex flex-col items-start justify-start space-y-6 p-6 transform translate-x-full transition-transform duration-300 ease-in-out">
+      <button id="close-btn" class="absolute top-6 right-6 text-[#223300] focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <a href="#tentang" class="text-lg hover:text-[#E45C10] transition">Tentang Kami</a>
+      <a href="#fitur" class="text-lg hover:text-[#E45C10] transition">Fitur Aplikasi</a>
+      <a href="#kontak" class="text-lg hover:text-[#E45C10] transition">Kontak Kami</a>
+      <a href="#testimoni" class="text-lg hover:text-[#E45C10] transition">Testimoni</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  header {
+    min-height: 64px;
+  }
+  #mobile-menu.open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+  @media (max-width: 767px) {
+    header {
+      border-radius: 0;
+    }
+    #mobile-menu {
+      height: 100vh;
+      overflow-y: auto;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('translate-x-full');
+        mobileMenu.classList.add('translate-x-0', 'open');
+      });
+      menuBtn.addEventListener('touchstart', () => {
+        mobileMenu.classList.remove('translate-x-full');
+        mobileMenu.classList.add('translate-x-0', 'open');
+      });
+    }
+
+    if (closeBtn && mobileMenu) {
+      closeBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('translate-x-0', 'open');
+        mobileMenu.classList.add('translate-x-full');
+      });
+      closeBtn.addEventListener('touchstart', () => {
+        mobileMenu.classList.remove('translate-x-0', 'open');
+        mobileMenu.classList.add('translate-x-full');
+      });
+    }
+
+    document.addEventListener('click', (e) => {
+      if (mobileMenu && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target) && mobileMenu.classList.contains('translate-x-0')) {
+        mobileMenu.classList.remove('translate-x-0', 'open');
+        mobileMenu.classList.add('translate-x-full');
+      }
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+          if (mobileMenu && mobileMenu.classList.contains('translate-x-0')) {
+            mobileMenu.classList.remove('translate-x-0', 'open');
+            mobileMenu.classList.add('translate-x-full');
+          }
+        }
+      });
+    });
+  });
+</script> -->
