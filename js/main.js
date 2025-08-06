@@ -77,3 +77,26 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 counters.forEach(counter => observer.observe(counter));
+
+// Mobile Menu Toggle
+const menuBtn = document.getElementById('menu-btn');
+  const closeBtn = document.getElementById('close-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.add('opacity-100', 'max-h-[500px]');
+    mobileMenu.classList.remove('opacity-0', 'max-h-0');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('opacity-100', 'max-h-[500px]');
+    mobileMenu.classList.add('opacity-0', 'max-h-0');
+  });
+
+  // Tutup menu saat klik link di mobile
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('opacity-100', 'max-h-[500px]');
+      mobileMenu.classList.add('opacity-0', 'max-h-0');
+    });
+  });

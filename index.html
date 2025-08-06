@@ -13,31 +13,42 @@
 
 <body class="bg-[#F6F4F1] text-gray-800 font-[Inter]">
  <!--Navbar-->  
-<header class="bg-white fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-5/6 max-w-7xl rounded-full shadow-xl">
-  <div class="container mx-auto flex justify-between items-center px-6 py-6 text-sm">
+<!-- Tailwind CDN (pastikan sudah ada di <head>) -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Navbar -->
+<header class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-11/12 md:w-5/6 max-w-7xl bg-white shadow-xl rounded-full md:rounded-3xl">
+  <nav class="flex justify-between items-center px-6 py-4">
+    
+    <!-- Logo -->
     <div class="flex items-center gap-2">
       <img src="images/logo.png" alt="logo" class="h-8">
     </div>
-    <nav class="text-md md:flex gap-20 hidden md:visible">
-      <a href="#tentang" class="md:text-sm hover:text-[#E45C10] transition">Tentang Kami</a>
-      <a href="#fitur" class="md:text-sm hover:text-[#E45C10] transition">Fitur Aplikasi</a>
-      <a href="#kontak" class="md:text-sm hover:text-[#E45C10] transition">Kontak Kami</a>
-      <a href="#testimoni" class="md:text-sm hover:text-[#E45C10] transition">Testimoni</a>
-    </nav>
 
-    <!-- Mobile Menu Button -->
+    <!-- Desktop Navigation -->
+    <ul class="hidden md:flex gap-8 text-sm font-medium">
+      <li><a href="#tentang" class="hover:text-[#E45C10] transition">Tentang Kami</a></li>
+      <li><a href="#fitur" class="hover:text-[#E45C10] transition">Fitur Aplikasi</a></li>
+      <li><a href="#kontak" class="hover:text-[#E45C10] transition">Kontak Kami</a></li>
+      <li><a href="#testimoni" class="hover:text-[#E45C10] transition">Testimoni</a></li>
+    </ul>
+
+    <!-- Hamburger Menu (Mobile) -->
     <div class="md:hidden">
       <button id="menu-btn" class="text-[#223300] focus:outline-none">
-        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7" />
         </svg>
       </button>
     </div>
+  </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden fixed top-0 right-0 w-64 bg-white bg-opacity-95 z-50 flex flex-col items-start justify-start space-y-6 p-6 transform translate-x-full transition-transform duration-300 ease-in-out">
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed top-0 left-0 w-full bg-white shadow-lg z-40 opacity-0 max-h-0 overflow-hidden transition-all duration-300 ease-in-out md:hidden">
+    <div class="flex flex-col space-y-6 p-6 pt-20">
       <button id="close-btn" class="absolute top-6 right-6 text-[#223300] focus:outline-none">
-        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
@@ -48,38 +59,6 @@
     </div>
   </div>
 </header>
-
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const closeBtn = document.getElementById('close-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.remove('translate-x-full');
-    mobileMenu.classList.add('translate-x-0');
-  });
-
-  closeBtn.addEventListener('click', () => {
-    mobileMenu.classList.remove('translate-x-0');
-    mobileMenu.classList.add('translate-x-full');
-  });
-
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-        // Tutup mobile menu
-        if (mobileMenu.classList.contains('translate-x-0')) {
-          mobileMenu.classList.remove('translate-x-0');
-          mobileMenu.classList.add('translate-x-full');
-        }
-      }
-    });
-  });
-</script>
 
   <!--Hero Section -->
   <section class="bg-[#4B5D16] text-white py-32 relative" id="tentang">
@@ -103,8 +82,8 @@
       </div>
 
     <!-- Statistik Kotak Lengkung -->
-    <div class="absolute left-1/2 transform -translate-x-1/2 w-full px-4 mt-16">
-      <div class="bg-white rounded-3xl max-w-6xl mx-auto overflow-x-auto">
+    <div class="absolute left-1/2 transform -translate-x-1/2 w-full px-6 mt-16">
+      <div class="bg-white rounded-3xl max-w-6xl mx-auto overflow-x-auto w-auto">
         <div class="relative flex justify-center items-center gap-4 md:gap-8 p-6 md:p-8 min-w-max">
           <div class="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none  divide-x-4"></div>
           <div class="text-center flex-shrink-0 px-2 md:px-4">
