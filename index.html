@@ -8,24 +8,19 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"> font-[Inter] -->
 </head>
 
-<body class="bg-[#F6F4F1] text-gray-800 font-[Inter]">
- <!--Navbar-->  
-<!-- Tailwind CDN (pastikan sudah ada di <head>) -->
-<script src="https://cdn.tailwindcss.com"></script>
+<body class="bg-[#F6F4F1] text-gray-800">
 
 <!-- Navbar -->
-<header class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-11/12 md:w-5/6 max-w-7xl bg-white shadow-xl rounded-full md:rounded-3xl">
+<header class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-11/12 
+md:w-5/6 max-w-7xl bg-white shadow-xl rounded-full md:rounded-3xl">
   <nav class="flex justify-between items-center px-6 py-4">
     
-    <!-- Logo -->
-    <div class="flex items-center gap-2">
+    <div class="flex items-center">
       <img src="images/logo.png" alt="logo" class="h-8">
     </div>
-
-    <!-- Desktop Navigation -->
     <ul class="hidden md:flex gap-8 text-sm font-medium">
       <li><a href="#tentang" class="hover:text-[#E45C10] transition">Tentang Kami</a></li>
       <li><a href="#fitur" class="hover:text-[#E45C10] transition">Fitur Aplikasi</a></li>
@@ -61,18 +56,19 @@
 </header>
 
   <!--Hero Section -->
-  <section class="bg-[#4B5D16] text-white py-32 relative" id="tentang">
+  <section class="bg-[#223300] text-white py-12" id="tentang">
     <div class="container mx-auto px-4 md:px-8 lg:max-w-screen-xl">
       <div class="flex flex-col lg:flex-row items-center gap-12">
-        <div class="lg:w-1/2 text-center lg:text-left">
-          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+        <div class="lg:w-1/2 text-center lg:text-left ltr">
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight left-1/2 ps-16">
             Platform Digital Terpercaya<br class="hidden md:block" /> untuk Pengelolaan
             <span class="text-[#29B34B]">ZIS</span><span class="text-[#F58220]">WAF</span> Masjid
           </h1>
-          <p class="mt-6 text-base md:text-lg max-w-xl mx-auto lg:mx-0">
+          <p class="mt-6 text-base md:text-lg max-w-xl mx-auto lg:mx-0 left-1/2 ps-16">
             Sudah berapa lama Anda mengelola ZISWAF secara manual? Efisiensi dan akuntabilitas menanti Anda
           </p>
-          <button href="#" class="mt-8 bg-gradient-to-r from-[#F2B635] to-[#E45C10] text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:scale-105 transition-transform">
+          <button href="#" class="mt-8 bg-gradient-to-r from-[#F2B635] to-[#E45C10] text-white px-6 py-3 rounded-lg 
+          font-semibold shadow-lg hover:scale-105 transition-transform left-1/2 transform translate-x-16">
             Daftar Sekarang →
           </button>
         </div>
@@ -82,7 +78,7 @@
       </div>
 
     <!-- Statistik Kotak Lengkung -->
-    <div class="absolute left-1/2 transform -translate-x-1/2 w-full px-6 mt-16">
+    <div class="absolute left-1/2 transform -translate-x-1/2 w-full">
       <div class="bg-white rounded-3xl max-w-6xl mx-auto overflow-x-auto w-auto">
         <div class="relative flex justify-center items-center gap-4 md:gap-8 p-6 md:p-8 min-w-max">
           <div class="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none  divide-x-4"></div>
@@ -127,7 +123,7 @@
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     <!-- Bagian Kiri -->
-    <div class="space-y-4">
+    <div class="space-y-10">
       <div class="flex items-center md:py-0 gap-6" data-aos="fade-up">
         <div class="text-right grow">
           <h4 class="font-bold mb-2 text-lg">Pengelolaan Data Muzakki</h4>
@@ -235,16 +231,20 @@
       </div>
 
       <!-- Kanan -->
-      <div class="w-full md:w-1/2 space-y-6 text-white" data-aos="fade-left">
-        <h2 class="text-3xl text-md md:text-4xl font-bold">Saatnya Masjid Anda 
-          Go Digital!</h2>
-        <p class="text-base md:text-lg">"Bergabunglah dengan 67+ masjid yang sudah 
-          merasakan kemudahan mengelola ZISWAF 
-          secara digital. Transparan, akuntabel, dan 
-          mudah digunakan."</p>
+      <div class="w-full md:w-1/2 space-y-6 text-white text-center md:text-left mx-auto" data-aos="fade-left">
+        <h2 class="text-3xl md:text-4xl font-bold">
+        Saatnya Masjid Anda 
+        Go Digital!
+        </h2>
+        <p class="text-lg md:text-lg">
+          "Bergabunglah dengan 67+ masjid yang sudah
+          merasakan kemudahan mengelola ZISWAF
+          secara digital. Transparan, akuntabel, dan
+          mudah digunakan."
+        </p>
 
         <!-- List manfaat -->
-        <ul class="space-y-4">
+        <ul class="space-y-4 text-left md:text-center mx-auto">
           <li class="flex items-center gap-2">
             <div>
               <img class="h-6" src="images/ceklis.png" alt="ceklis">
@@ -270,6 +270,7 @@
             </button>
           </li>
         </ul>
+
       </div>
     </div>
   </div>
@@ -280,7 +281,7 @@
   <div class="py-32">
     <h3 class="text-4xl md:text-2xl font-bold text-[#223300] text-center mb-10" data-aos="fade-up">Tersedia pada Semua Platform</h3>
     <div class="border-b border-lime-900 w-32 mx-auto mt-10 mb-10" data-aos="fade-up"></div>
-    <h5 class="text-md md:text-md text-center" data-aos="fade-up">Menambah pengalaman untuk melakukan wakaf pada berbagai media</h5>
+    <h5 class="text-md md:text-md text-center md:text center" data-aos="fade-up">Menambah pengalaman untuk melakukan wakaf pada berbagai media</h5>
     <div class="flex justify-center gap-6 mt-10">
       <img src="images/android.png" alt="Android" class="h-70" data-aos="fade-right">
     </div>
@@ -496,12 +497,13 @@
         <img src="images/logo.png" alt="SMARTZISWAF Logo" class="h-12 mb-2 mx-auto md:mx-0">
         <p class="text-sm">Platform Digital Terpercaya untuk Pengelolaan ZISWAF Masjid.</p>
       </div>
+      
       <nav class="text-sm font-medium">
         <ul class="flex flex-col md:flex-row gap-4 md:gap-8">
-          <li><a href="#tentang" class="hover:text-[#E45C10] transition-colors">Tentang Kami</a></li>
-          <li><a href="#fitur" class="hover:text-[#E45C10] transition-colors">Fitur Aplikasi</a></li>
-          <li><a href="#kontak" class="hover:text-[#E45C10] transition-colors">Kontak Kami</a></li>
-          <li><a href="#testimoni" class="hover:text-[#E45C10] transition-colors">Testimoni</a></li>
+          <li><a href="#tentang" class="hover:underline transition-colors">Tentang Kami</a></li>
+          <li><a href="#fitur" class="hover:underline transition-colors">Fitur Aplikasi</a></li>
+          <li><a href="#kontak" class="hover:underline transition-colors">Kontak Kami</a></li>
+          <li><a href="#testimoni" class="hover:underline transition-colors">Testimoni</a></li>
         </ul>
       </nav>
     </div>
@@ -517,112 +519,3 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/main.js"></script>
 </html>
-
-
-<!-- <header class="bg-white fixed w-full z-50 shadow-xl md:rounded-full">
-  <div class="container mx-auto flex justify-between items-center px-4 py-4 text-sm">
-    <div class="flex items-center gap-2">
-      <img src="images/logo.png" alt="logo" class="h-8">
-    </div>
-    <nav class="text-md md:flex gap-8 hidden">
-      <a href="#tentang" class="hover:text-[#E45C10] transition">Tentang Kami</a>
-      <a href="#fitur" class="hover:text-[#E45C10] transition">Fitur Aplikasi</a>
-      <a href="#kontak" class="hover:text-[#E45C10] transition">Kontak Kami</a>
-      <a href="#testimoni" class="hover:text-[#E45C10] transition">Testimoni</a>
-    </nav>
-    <div class="md:hidden">
-      <button id="menu-btn" class="text-[#223300] focus:outline-none">
-        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
-    </div>
-    <div id="mobile-menu" class="md:hidden fixed top-0 right-0 w-3/4 max-w-sm bg-white bg-opacity-95 z-50 flex flex-col items-start justify-start space-y-6 p-6 transform translate-x-full transition-transform duration-300 ease-in-out">
-      <button id="close-btn" class="absolute top-6 right-6 text-[#223300] focus:outline-none">
-        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-      <a href="#tentang" class="text-lg hover:text-[#E45C10] transition">Tentang Kami</a>
-      <a href="#fitur" class="text-lg hover:text-[#E45C10] transition">Fitur Aplikasi</a>
-      <a href="#kontak" class="text-lg hover:text-[#E45C10] transition">Kontak Kami</a>
-      <a href="#testimoni" class="text-lg hover:text-[#E45C10] transition">Testimoni</a>
-    </div>
-  </div>
-</header>
-
-<style>
-  header {
-    min-height: 64px;
-  }
-  #mobile-menu.open::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-  }
-  @media (max-width: 767px) {
-    header {
-      border-radius: 0;
-    }
-    #mobile-menu {
-      height: 100vh;
-      overflow-y: auto;
-    }
-  }
-</style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const menuBtn = document.getElementById('menu-btn');
-    const closeBtn = document.getElementById('close-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    if (menuBtn && mobileMenu) {
-      menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.remove('translate-x-full');
-        mobileMenu.classList.add('translate-x-0', 'open');
-      });
-      menuBtn.addEventListener('touchstart', () => {
-        mobileMenu.classList.remove('translate-x-full');
-        mobileMenu.classList.add('translate-x-0', 'open');
-      });
-    }
-
-    if (closeBtn && mobileMenu) {
-      closeBtn.addEventListener('click', () => {
-        mobileMenu.classList.remove('translate-x-0', 'open');
-        mobileMenu.classList.add('translate-x-full');
-      });
-      closeBtn.addEventListener('touchstart', () => {
-        mobileMenu.classList.remove('translate-x-0', 'open');
-        mobileMenu.classList.add('translate-x-full');
-      });
-    }
-
-    document.addEventListener('click', (e) => {
-      if (mobileMenu && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target) && mobileMenu.classList.contains('translate-x-0')) {
-        mobileMenu.classList.remove('translate-x-0', 'open');
-        mobileMenu.classList.add('translate-x-full');
-      }
-    });
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-          if (mobileMenu && mobileMenu.classList.contains('translate-x-0')) {
-            mobileMenu.classList.remove('translate-x-0', 'open');
-            mobileMenu.classList.add('translate-x-full');
-          }
-        }
-      });
-    });
-  });
-</script> -->

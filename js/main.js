@@ -8,11 +8,9 @@ AOS.init({
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
-    navbar.classList.remove('bg-white', 'rounded-full', 'shadow-lg');
     navbar.classList.add('bg-transparent');
   } else {
     navbar.classList.remove('bg-transparent');
-    navbar.classList.add('bg-white', 'rounded-full', 'shadow-lg');
   }
 });
 
