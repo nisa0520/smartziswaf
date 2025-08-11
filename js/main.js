@@ -1,6 +1,6 @@
 // Animate on Scroll
 AOS.init({
-  duration: 800,
+  duration: 1000,
   once: true,
 });
 
@@ -98,3 +98,28 @@ const menuBtn = document.getElementById('menu-btn');
       mobileMenu.classList.add('opacity-0', 'max-h-0');
     });
   });
+
+  // Splide Initialization for Testimonial Carousel
+document.addEventListener('DOMContentLoaded', () => {
+  new Splide('#testimonialSplide', {
+    type: 'loop',
+    perPage: 3,
+    perMove: 1,
+    gap: '1.5rem',
+    autoplay: true,
+    interval: 3000,
+    pauseOnHover: true,
+    pauseOnFocus: true,
+    arrows: true,
+    breakpoints: {
+      1024: {
+        perPage: 2,
+        gap: '1rem',
+      },
+      640: {
+        perPage: 1,
+        gap: '0.75rem',
+      },
+    },
+  }).mount();
+});
