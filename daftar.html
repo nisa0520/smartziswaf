@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <title>SMARTZISWAF</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-[#F6F4F1] text-gray-800">
+
+<!-- Navbar -->
+<header class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-11/12 
+md:w-5/6 max-w-7xl bg-white shadow-xl rounded-full md:rounded-full">
+  <nav class="flex justify-between items-center p-4">
+    
+    <div class="flex items-center">
+      <img src="images/logo.png" alt="logo" class="h-8">
+    </div>
+    <ul class="hidden md:flex gap-8 text-sm font-medium justify-items-center items-center">
+      <li><a href="#tentang" class="hover:text-[#E45C10] transition">Tentang Kami</a></li>
+      <li><a href="#fitur" class="hover:text-[#E45C10] transition">Fitur Aplikasi</a></li>
+      <li><a href="#kontak" class="hover:text-[#E45C10] transition">Kontak Kami</a></li>
+      <li><a href="#testimoni" class="hover:text-[#E45C10] transition">Testimoni</a></li>
+      <button class="bg-gradient-to-r from-[#4B5D16] to-[#223300] text-white p-4 rounded-full 
+      font-semibold hover:scale-105 transition-transform">
+        Sign In
+      </button>
+    </ul>
+
+    <!-- Hamburger Menu (Mobile) -->
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-[#223300] focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed top-0 left-0 w-full bg-white shadow-lg 
+  z-40 opacity-0 max-h-0 overflow-hidden transition-all duration-300 ease-in-out md:hidden">
+    <div class="flex flex-col space-y-6 p-6 pt-20">
+      <button id="close-btn" class="absolute top-6 right-6 text-[#223300] focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <a href="#tentang" class="text-lg hover:text-[#E45C10] transition">Tentang Kami</a>
+      <a href="#fitur" class="text-lg hover:text-[#E45C10] transition">Fitur Aplikasi</a>
+      <a href="#kontak" class="text-lg hover:text-[#E45C10] transition">Kontak Kami</a>
+      <a href="#testimoni" class="text-lg hover:text-[#E45C10] transition">Testimoni</a>
+      <button class="bg-gradient-to-r from-[#4B5D16] to-[#223300] text-white p-4 rounded-full 
+      font-semibold shadow-lg hover:scale-105 transition-transform">
+        Sign In
+      </button>
+    </div>
+  </div>
+</header>
+
+  <!-- Hero Section -->
+<div class="flex flex-col justify-center px-6 py-12 lg:px-8 bg-[#F6F4F1] pt-32">
+  <div class="sm:mx-auto sm:w-full sm:max-w-4xl">
+    <img src="images/logo.png" alt="Smart ZISWAF" class="mx-auto h-16 w-auto" />
+    <h2 class="mt-10 text-center text-4xl font-bold tracking-tight text-black">Pendaftaran Aplikasi Pengelolaan <span class="text-[#29B34B]">ZIS</span><span class="text-[#F58220]">WAF</span> Masjid Berbasis Online</h2>
+    <p class="mt-4 text-center text-lg text-gray-500">Silakan daftarkan masjid Anda untuk mendapatkan link aplikasi dan akun secara gratis dan mudah. Mohon lengkapi data di bawah ini dengan benar.</p>
+  </div>
+
+  <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-4xl bg-[#ECE2CE] p-6 rounded-lg shadow-md">
+    <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+        <div class="mt-1">
+          <input id="email" type="email" name="email" required autocomplete="email" class="block w-full rounded-md border border-[#ABABAB] px-3 py-2 text-sm focus:border-indigo-500 focus:ring-indigo-500"  placeholder="name@email.xyz" required />
+        </div>
+      </div>
+
+      <div>
+        <label for="namaDKM" class="block text-sm font-medium text-gray-700">Nama Ketua DKM</label>
+        <div class="mt-1">
+          <input id="namaKtp" type="text" name="namaKtp" required autocomplete="name" class="block w-full rounded-md border border-[#ABABAB] px-3 py-2 text-sm focus:border-indigo-500 focus:ring-indigo-500"  placeholder="Rahmat Adi" required />
+        </div>
+      </div>
+
+      <div>
+        <label for="noTelp" class="block text-sm font-medium text-gray-700">No. Telpon</label>
+        <div class="mt-1">
+          <input id="noTelp" type="tel" name="noTelp" required autocomplete="tel" class="block w-full rounded-md border border-[#ABABAB] px-3 py-2 text-sm focus:border-indigo-500 focus:ring-indigo-500"   placeholder="089xxxxxxx" required />
+        </div>
+      </div>
+
+      <div>
+        <label for="alamat" class="block text-sm font-medium text-gray-700">Alamat</label>
+        <div class="mt-1">
+          <input id="alamat" type="text" name="alamat" required autocomplete="address" class="block w-full rounded-md border border-[#ABABAB] px-3 py-2 text-sm focus:border-indigo-500 focus:ring-indigo-500"   placeholder="Jln. ABC No.xx " required/>
+        </div>
+      </div>
+
+      <div>
+        <label for="provinsiMesjid" class="block text-sm font-medium text-gray-700">Provinsi Mesjid</label>
+        <div class="mt-1">
+           <select id="pronvinsiKota" class="block w-full rounded-md border border-[#ABABAB] px-3 py-2 text-sm focus:border-indigo-500 focus:ring-indigo-500">
+            <option>Aceh</option>
+            <option>Jakarta</option>
+            <option>Jawa Barat</option>
+            <option>Riau</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label for="kabupatenKota" class="block text-sm font-medium text-gray-700">Kabupaten/Kota Mesjid</label>
+        <div class="mt-1">
+          <select id="kotaKabupaten" class="block w-full rounded-md border border-[#ABABAB] px-3 py-2 text-sm focus:border-indigo-500 focus:ring-indigo-500">
+            <option>Kabupaten Bandung</option>
+            <option>Kabupaten Bandung Barat</option>
+            <option>Kota Bandung</option>
+            <option>Kota Bogor</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label for="kecamatan" class="block text-sm font-medium text-gray-700">Kecamatan Mesjid</label>
+        <div class="mt-1">
+          <select id="kecamatan" class="block w-full rounded-md border border-[#ABABAB] px-3 py-2 text-sm focus:border-indigo-500 focus:ring-indigo-500">
+            <option>Banjaran</option>
+            <option>Banjaran</option>
+            <option>Ciparay</option>
+            <option>Soreang</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label for="desaKelurahan" class="block text-sm font-medium text-gray-700">Desa/Kelurahan Mesjid</label>
+        <div class="mt-1">
+          <select id="kecamatan" class="block w-full rounded-md border border-[#ABABAB] px-3 py-2 text-sm focus:border-indigo-500 focus:ring-indigo-500">
+            <option>Banjaran</option>
+            <option>Banjaran</option>
+            <option>Ciparay</option>
+            <option>Soreang</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-span-1 md:col-span-2 flex justify-center items-center">
+        <button type="submit" class="bg-gradient-to-r from-[#F2B635] to-[#E45C10] text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:scale-105 transition-transform">
+          Daftar Sekarang →
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Button kembali ke atas -->
+ <a href="#tentang" id="back-to-top" class="fixed bottom-3 right-3 sm:bottom-6 sm:right-6 bg-[#E45C10] text-white p-2 sm:p-3 rounded-full shadow-lg hover:bg-[#F2B635] transition-colors hidden z-40" title="Kembali ke Atas">
+  <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+  </svg>
+</a>
+
+  <!-- Footer -->
+  <footer class="bg-[#F6F4F1] py-20 pb-16">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <div class="text-center md:text-left mb-6 md:mb-0">
+        <img src="images/logo.png" alt="SMARTZISWAF Logo" class="h-12 mb-2 mx-auto md:mx-0">
+        <p class="text-sm">Platform Digital Terpercaya untuk Pengelolaan ZISWAF Masjid.</p>
+      </div>
+      
+      <nav class="text-sm font-medium">
+        <ul class="flex flex-col md:flex-row gap-4 md:gap-8">
+          <li><a href="#tentang" class="hover:text-[#E45C10] transition-colors">Tentang Kami</a></li>
+          <li><a href="#fitur" class="hover:text-[#E45C10] transition-colors">Fitur Aplikasi</a></li>
+          <li><a href="#kontak" class="hover:text-[#E45C10] transition-colors">Kontak Kami</a></li>
+          <li><a href="#testimoni" class="hover:text-[#E45C10] transition-colors">Testimoni</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="flex flex-col md:flex-row justify-between items-center mt-8 text-sm border-t border-lime-900 pt-6">
+      <p>© 2025 SMARTZISWAF. All rights reserved.</p>
+      <p class="mt-4 md:mt-0">Powered by <img src="images/logo-4vm.svg" alt="4VM" class="inline-block h-6"></p>
+    </div>
+  </div>
+</footer>
+
+  <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</html>
