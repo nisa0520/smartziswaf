@@ -14,22 +14,25 @@
 
 <!-- Navbar -->
 <header class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-11/12 
-md:w-5/6 max-w-7xl bg-white shadow-xl rounded-full md:rounded-full">
+md:w-5/6 max-w-7xl bg-white/70 backdrop-blur-lg shadow-lg rounded-full">
   <nav class="flex justify-between items-center p-4">
-    
+    <!-- Logo -->
     <div class="flex items-center">
       <img src="images/logo.png" alt="logo" class="h-8">
     </div>
-    <ul class="hidden md:flex gap-8 text-sm font-medium justify-items-center items-center">
+    <!-- Menu -->
+    <ul class="hidden md:flex gap-8 text-sm font-medium items-center">
       <li><a href="#tentang" class="hover:text-[#E45C10] transition">Tentang Kami</a></li>
       <li><a href="#fitur" class="hover:text-[#E45C10] transition">Fitur Aplikasi</a></li>
       <li><a href="#kontak" class="hover:text-[#E45C10] transition">Kontak Kami</a></li>
       <li><a href="#testimoni" class="hover:text-[#E45C10] transition">Testimoni</a></li>
-      <button class="bg-gradient-to-r from-[#4B5D16] to-[#223300] text-white p-4 rounded-full 
+      <button class="bg-gradient-to-r from-[#4B5D16] to-[#223300] text-white px-5 py-2 rounded-full 
       font-semibold hover:scale-105 transition-transform">
         <a href="sign-in.html">Sign In</a>
       </button>
     </ul>
+  </nav>
+</header>
 
     <!-- Hamburger Menu (Mobile) -->
     <div class="md:hidden">
@@ -63,176 +66,174 @@ md:w-5/6 max-w-7xl bg-white shadow-xl rounded-full md:rounded-full">
   </div>
 </header>
 
-  <!--Hero Section -->
-  <section class="bg-[#223300] text-white py-24 md:py-12 md:mt-0" id="tentang">
-    <div class="container mx-auto px-4 md:px-8 lg:max-w-screen-xl pt-12 md:pt-16">
+  <!-- Hero Section -->
+<section class="bg-[#223300] text-white relative pb-40" id="tentang">
+  <div class="container mx-auto px-4 md:px-8 lg:max-w-screen-xl pt-16 md:pt-32">
     <div class="flex flex-col lg:flex-row items-center gap-12">
-    <div class="lg:w-1/2 text-center lg:text-left lg:pl-16 order-1">
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold">
-        Platform Digital Terpercaya<br class="hidden md:block" /> untuk Pengelolaan
-        <span class="text-[#29B34B]">ZIS</span><span class="text-[#F58220]">WAF</span> Masjid
-      </h1>
-      <p class="mt-6 text-base md:text-lg max-w-xl mx-auto lg:mx-0">
-        Sudah berapa lama Anda mengelola ZISWAF secara manual? Efisiensi dan akuntabilitas menanti Anda
-      </p>
-      <button class="mt-8 bg-gradient-to-r from-[#F2B635] to-[#E45C10] text-white px-6 py-3 rounded-lg 
-      font-semibold shadow-lg hover:scale-105 transition-transform">
-        <a href='daftar.html'>Daftar Sekarang →</a>
-      </button>
-    </div>
-    <div class="lg:w-1/2 order-2">
-      <img src="images/laptop.webp" alt="Dashboard Preview" class="w-full h-auto object-cover">
+      
+      <!-- Text -->
+      <div class="lg:w-1/2 text-center lg:text-left lg:pl-16 order-1">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold">
+          Platform Digital Terpercaya<br class="hidden md:block" /> untuk Pengelolaan
+          <span class="text-[#29B34B]">ZIS</span><span class="text-[#F58220]">WAF</span> Masjid
+        </h1>
+        <p class="mt-6 text-base md:text-lg max-w-xl mx-auto lg:mx-0">
+          Sudah berapa lama Anda mengelola ZISWAF secara manual? Efisiensi dan akuntabilitas menanti Anda
+        </p>
+        <button class="mt-8 bg-gradient-to-r from-[#F2B635] to-[#E45C10] text-white px-6 py-3 rounded-lg 
+        font-semibold shadow-lg hover:scale-105 transition-transform">
+          <a href='daftar.html'>Daftar Sekarang →</a>
+        </button>
+      </div>
+
+      <!-- Mockup -->
+      <div class="lg:w-1/2 order-2">
+        <div class="relative">
+          <img src="images/nyoba.png" alt="Dashboard Preview" 
+               class="w-full h-auto object-cover transform lg:scale-110 lg:translate-x-8">
+        </div>
+      </div>
     </div>
   </div>
+</section>
+
+<!-- Statistik Kotak Lengkung -->
+<div class="relative -mt-20 "> 
+  <div class="bg-white rounded-3xl max-w-6xl mx-auto shadow-xl"> 
+    <div class="flex flex-wrap justify-center items-center gap-6 md:gap-10 p-4 md:p-10"> 
+      
+      <div class="text-center">
+        <h4 class="text-xl md:text-2xl lg:text-3xl font-bold text-[#F2B635] counter" data-target="67">0+</h4>
+        <p class="text-gray-600 text-xs md:text-sm mt-1">Jumlah Masjid</p>
+      </div> 
+      <div class="text-center">
+        <h4 class="text-xl md:text-2xl lg:text-3xl font-bold text-[#F2B635] counter" data-target="18">0+</h4>
+        <p class="text-gray-600 text-xs md:text-sm mt-1">Jumlah Provinsi</p>
+      </div> 
+      <div class="text-center">
+        <h4 class="text-xl md:text-2xl lg:text-3xl font-bold text-[#F2B635] counter" data-target="41">0+</h4>
+        <p class="text-gray-600 text-xs md:text-sm mt-1">Jumlah Kota</p>
+      </div> 
+      <div class="text-center">
+        <h4 class="text-xl md:text-2xl lg:text-3xl font-bold text-[#F2B635] counter" data-target="55">0+</h4>
+        <p class="text-gray-600 text-xs md:text-sm mt-1">Jumlah Kecamatan</p>
+      </div> 
+      <div class="text-center">
+        <h4 class="text-xl md:text-2xl lg:text-3xl font-bold text-[#F2B635] counter" data-target="50">0+</h4>
+        <p class="text-gray-600 text-xs md:text-sm mt-1">Jumlah Desa</p>
+      </div> 
+      <div class="text-center">
+        <h4 class="text-xl md:text-2xl lg:text-3xl font-bold text-[#F2B635] counter" data-target="5774">0+</h4>
+        <p class="text-gray-600 text-xs md:text-sm mt-1">Jumlah Muzakki</p>
+      </div> 
+      <div class="text-center">
+        <h4 class="text-xl md:text-2xl lg:text-3xl font-bold text-[#F2B635] counter" data-target="2029">0+</h4>
+        <p class="text-gray-600 text-xs md:text-sm mt-1">Jumlah Mustahik</p>
+      </div> 
+
+    </div> 
+  </div> 
 </div>
 
-    <!-- Statistik Kotak Lengkung -->
-    <div class="absolute left-1/2 transform -translate-x-1/2 w-full">
-      <div class="bg-white rounded-3xl max-w-6xl mx-auto overflow-x-auto w-auto">
-        <div class="relative flex justify-center items-center gap-4 md:gap-8 p-6 md:p-8 min-w-max">
-          <div class="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none  divide-x-4"></div>
-          <div class="text-center flex-shrink-0 px-2 md:px-4">
-            <h4 class="text-xl md:text-2xl lg:text-3xl font-bold text-[#F2B635] counter" data-target="67">0</h4>
-            <p class="text-gray-600 text-xs md:text-sm mt-1 whitespace-nowrap">Jumlah Masjid</p>
-          </div>
-          <div class="text-center flex-shrink-0 px-2 md:px-4">
-            <h4 class="text-xl md:text-2xl lg:text-3xl font-bold text-[#F2B635] counter" data-target="18">0</h4>
-            <p class="text-gray-600 text-xs md:text-sm mt-1 whitespace-nowrap">Jumlah Provinsi</p>
-          </div>
-          <div class="text-center flex-shrink-0 px-2 md:px-4">
-            <h4 class="text-xl md:text-2xl lg:text-3xl font-bold text-[#F2B635] counter" data-target="41">0</h4>
-            <p class="text-gray-600 text-xs md:text-sm mt-1 whitespace-nowrap">Jumlah Kota</p>
-          </div>
-          <div class="text-center flex-shrink-0 px-2 md:px-4">
-            <h4 class="text-xl md:text-2xl lg:text-3xl font-bold text-[#F2B635] counter" data-target="55">0</h4>
-            <p class="text-gray-600 text-xs md:text-sm mt-1 whitespace-nowrap">Jumlah Kecamatan</p>
-          </div>
-          <div class="text-center flex-shrink-0 px-2 md:px-4">
-            <h4 class="text-xl md:text-2xl lg:text-3xl font-bold text-[#F2B635] counter" data-target="50">0</h4>
-            <p class="text-gray-600 text-xs md:text-sm mt-1 whitespace-nowrap">Jumlah Desa</p>
-          </div>
-          <div class="text-center flex-shrink-0 px-2 md:px-4">
-            <h4 class="text-xl md:text-2xl lg:text-3xl font-bold text-[#F2B635] counter" data-target="5774">0</h4>
-            <p class="text-gray-600 text-xs md:text-sm mt-1 whitespace-nowrap">Jumlah Muzakki</p>
-          </div>
-          <div class="text-center flex-shrink-0 px-2 md:px-4">
-            <h4 class="text-xl md:text-2xl lg:text-3xl font-bold text-[#F2B635] counter" data-target="2029">0</h4>
-            <p class="text-gray-600 text-xs md:text-sm mt-1 whitespace-nowrap">Jumlah Mustahik</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Feature Section -->
-<section id="fitur" class="py-32 container mx-auto px-4">
-  <h4 class="text-2xl md:text-2xl font-bold text-[#223300] text-center mb-6" data-aos="fade-up">Fitur yang Mengubah Niat Baik Jadi Aksi Nyata</h4>
+<!-- Feature Section -->
+<section id="fitur" class="py-12 container mx-auto px-4">
+  <h4 class="text-2xl md:text-2xl font-bold text-[#223300] text-center mb-6" data-aos="fade-up">
+    Fitur yang Mengubah Niat Baik Jadi Aksi Nyata
+  </h4>
   <div class="border-b border-lime-900 w-32 mx-auto mt-10 mb-10" data-aos="fade-up"></div>
-  <h5 class="text-lg md:text-lg text-center mb-10" data-aos="fade-up">Teknologi canggih yang memudahkan setiap langkah wakaf Anda</h5>
+  <h5 class="text-lg md:text-lg text-center mb-10" data-aos="fade-up">
+    Teknologi canggih yang memudahkan setiap langkah wakaf Anda
+  </h5>
 
-  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-    <!-- Bagian Kiri -->
-    <div class="space-y-10">
-      <div class="flex items-center gap-6" data-aos="fade-up">
-        <div class="text-right grow">
-          <h4 class="font-bold mb-2 text-lg">Pengelolaan Data Muzakki</h4>
-          <p class="text-gray-600 text-md md:w-full">Mencatat data para muzakki (wajib zakat) dan juga donatur infaq, shadaqah maupun wakaf.</p>
-        </div>
-        <div class="flex items-center justify-center size-12 rounded-full shrink-0 bg-[#223300]">
-          <img src="images/group.png" alt="fitur" class="size-6 object-contain">
-        </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Fitur 1 -->
+    <div class="bg-white shadow-lg rounded-2xl p-6 text-center" data-aos="fade-up">
+      <div class="flex items-center justify-center size-16 rounded-full bg-[#223300] mx-auto mb-4">
+        <img src="images/group.png" alt="fitur" class="size-8 object-contain">
       </div>
-      <div class="flex items-center gap-6" data-aos="fade-up">
-        <div class="text-right grow">
-          <h4 class="font-bold mb-2 text-lg">Pengelolaan Data Mustahik</h4>
-          <p class="text-gray-600 text-md">Mencatat data para mustahiq (penerima zakat) dengan pengelompokan berdasarkan asnaf zakat.</p>
-        </div>
-        <div class="flex items-center justify-center size-12 rounded-full shrink-0 bg-[#223300]">
-          <img src="images/user-love.png" alt="fitur" class="size-6 object-contain">
-        </div>
-      </div>
-      <div class="flex items-center gap-6" data-aos="fade-up">
-        <div class="text-right grow">
-          <h4 class="font-bold mb-2 text-lg">Pengelolaan Data Umat</h4>
-          <p class="text-gray-600 text-md">Gabungan dari data muzakki dan data mustahiq dan juga data jama'ah lainnya.</p>
-        </div>
-        <div class="flex items-center justify-center size-12 rounded-full shrink-0 bg-[#223300]">
-          <img src="images/user-plus.png" alt="fitur" class="size-6 object-contain">
-        </div>
-      </div>
-      <div class="flex items-center gap-6" data-aos="fade-up">
-        <div class="text-right grow">
-          <h4 class="font-bold mb-2 text-lg">Pendistribusian ZISWAF</h4>
-          <p class="text-gray-600 text-md">Mempercepat proses perhitungan pendistribusian zakat.</p>
-        </div>
-        <div class="flex items-center justify-center size-12 rounded-full shrink-0 bg-[#223300]">
-          <img src="images/money.png" alt="fitur" class="size-6 object-contain">
-        </div>
-      </div>
-      <div class="flex items-center gap-6" data-aos="fade-up">
-        <div class="text-right grow">
-          <h4 class="font-bold mb-2 text-lg">Monitoring Pengelolaan</h4>
-          <p class="text-gray-600 text-md">Memberikan kemudahan kepada para pengurus dan stakeholders masjid untuk mengelola secara online.</p>
-        </div>
-        <div class="flex items-center justify-center size-12 rounded-full shrink-0 bg-[#223300]">
-          <img src="images/monitor.png" alt="fitur" class="size-6 object-contain">
-        </div>
-      </div>
+      <h4 class="font-bold mb-2 text-lg">Pengelolaan Data Muzakki</h4>
+      <p class="text-gray-600 text-sm">Mencatat data para muzakki (wajib zakat) dan juga donatur infaq, shadaqah maupun wakaf.</p>
     </div>
 
-    <!-- Bagian Tengah -->
-    <div class="flex flex-col items-center" data-aos="fade-up">
-      <img src="images/phone7.webp" alt="phone4" class="max-w-xs h-auto mb-6">
+    <!-- Fitur 2 -->
+    <div class="bg-white shadow-lg rounded-2xl p-6 text-center" data-aos="fade-up">
+      <div class="flex items-center justify-center size-16 rounded-full bg-[#223300] mx-auto mb-4">
+        <img src="images/user-love.png" alt="fitur" class="size-8 object-contain">
+      </div>
+      <h4 class="font-bold mb-2 text-lg">Pengelolaan Data Mustahik</h4>
+      <p class="text-gray-600 text-sm">Mencatat data para mustahiq (penerima zakat) dengan pengelompokan berdasarkan asnaf zakat.</p>
     </div>
 
-    <!-- Bagian Kanan -->
-    <div class="space-y-12">
-      <div class="flex items-center gap-6" data-aos="fade-up">
-        <div class="flex items-center justify-center size-12 rounded-full shrink-0 bg-[#223300]">
-          <img src="images/notes.png" alt="fitur" class="size-6 object-contain">
-        </div>
-        <div class="text-left grow">
-          <h4 class="font-bold mb-2 text-lg">Laporan</h4>
-          <p class="text-gray-600 text-md">Rekap hasil laporan data Muzakki, Zakat non Fitrah, data Asnaf, data Cluster dan data Pembayaran Zakat.</p>
-        </div>
+    <!-- Fitur 3 -->
+    <div class="bg-white shadow-lg rounded-2xl p-6 text-center" data-aos="fade-up">
+      <div class="flex items-center justify-center size-16 rounded-full bg-[#223300] mx-auto mb-4">
+        <img src="images/user-plus.png" alt="fitur" class="size-8 object-contain">
       </div>
-      <div class="flex items-center gap-6" data-aos="fade-up">
-        <div class="flex items-center justify-center size-12 rounded-full shrink-0 bg-[#223300]">
-          <img src="images/download.png" alt="fitur" class="size-6 object-contain">
-        </div>
-        <div class="text-left grow">
-          <h4 class="font-bold mb-2 text-lg">Download Data</h4>
-          <p class="text-gray-600 text-md">Mempermudah pengurus melakukan rekap data dan juga penyajian informasi berbasis cetak.</p>
-        </div>
-      </div>
-      <div class="flex items-center gap-6" data-aos="fade-up">
-        <div class="flex items-center justify-center size-12 rounded-full shrink-0 bg-[#223300]">
-          <img src="images/user.png" alt="fitur" class="size-6 object-contain">
-        </div>
-        <div class="text-left grow">
-          <h4 class="font-bold mb-2 text-lg">Pengelolaan Pengguna</h4>
-          <p class="text-gray-600 text-md">Dapat diakses oleh beberapa orang sekaligus.</p>
-        </div>
-      </div>
-      <div class="flex items-center gap-6" data-aos="fade-up">
-        <div class="flex items-center justify-center size-12 rounded-full shrink-0 bg-[#223300]">
-          <img src="images/struk.png" alt="fitur" class="size-6 object-contain">
-        </div>
-        <div class="text-left grow">
-          <h4 class="font-bold mb-2 text-lg">Print Struk</h4>
-          <p class="text-gray-600 text-md">Memberikan bukti tanda terima ziswaf dengan melakukan print.</p>
-        </div>
-      </div>
+      <h4 class="font-bold mb-2 text-lg">Pengelolaan Data Umat</h4>
+      <p class="text-gray-600 text-sm">Gabungan dari data muzakki dan data mustahiq dan juga data jama'ah lainnya.</p>
     </div>
+
+    <!-- Fitur 4 -->
+    <div class="bg-white shadow-lg rounded-2xl p-6 text-center" data-aos="fade-up">
+      <div class="flex items-center justify-center size-16 rounded-full bg-[#223300] mx-auto mb-4">
+        <img src="images/money.png" alt="fitur" class="size-8 object-contain">
+      </div>
+      <h4 class="font-bold mb-2 text-lg">Pendistribusian ZISWAF</h4>
+      <p class="text-gray-600 text-sm">Mempercepat proses perhitungan pendistribusian zakat.</p>
+    </div>
+
+    <!-- Fitur 5 -->
+    <div class="bg-white shadow-lg rounded-2xl p-6 text-center" data-aos="fade-up">
+      <div class="flex items-center justify-center size-16 rounded-full bg-[#223300] mx-auto mb-4">
+        <img src="images/monitor.png" alt="fitur" class="size-8 object-contain">
+      </div>
+      <h4 class="font-bold mb-2 text-lg">Monitoring Pengelolaan</h4>
+      <p class="text-gray-600 text-sm">Memberikan kemudahan kepada para pengurus dan stakeholders masjid untuk mengelola secara online.</p>
+    </div>
+
+    <!-- Fitur 6 -->
+    <div class="bg-white shadow-lg rounded-2xl p-6 text-center" data-aos="fade-up">
+      <div class="flex items-center justify-center size-16 rounded-full bg-[#223300] mx-auto mb-4">
+        <img src="images/notes.png" alt="fitur" class="size-8 object-contain">
+      </div>
+      <h4 class="font-bold mb-2 text-lg">Laporan</h4>
+      <p class="text-gray-600 text-sm">Rekap hasil laporan data Muzakki, Zakat non Fitrah, data Asnaf, data Cluster dan data Pembayaran Zakat.</p>
+    </div>
+
+    <!-- Fitur 7 -->
+    <div class="bg-white shadow-lg rounded-2xl p-6 text-center" data-aos="fade-up">
+      <div class="flex items-center justify-center size-16 rounded-full bg-[#223300] mx-auto mb-4">
+        <img src="images/download.png" alt="fitur" class="size-8 object-contain">
+      </div>
+      <h4 class="font-bold mb-2 text-lg">Download Data</h4>
+      <p class="text-gray-600 text-sm">Mempermudah pengurus melakukan rekap data dan juga penyajian informasi berbasis cetak.</p>
+    </div>
+
+    <!-- Fitur 8 -->
+    <div class="bg-white shadow-lg rounded-2xl p-6 text-center" data-aos="fade-up">
+      <div class="flex items-center justify-center size-16 rounded-full bg-[#223300] mx-auto mb-4">
+        <img src="images/user.png" alt="fitur" class="size-8 object-contain">
+      </div>
+      <h4 class="font-bold mb-2 text-lg">Pengelolaan Pengguna</h4>
+      <p class="text-gray-600 text-sm">Dapat diakses oleh beberapa orang sekaligus.</p>
+    </div>
+
+    <!-- Fitur 3 -->
+    <div class="bg-white shadow-lg rounded-2xl p-6 text-center" data-aos="fade-up">
+      <div class="flex items-center justify-center size-16 rounded-full bg-[#223300] mx-auto mb-4">
+        <img src="images/struk.png" alt="fitur" class="size-8 object-contain">
+      </div>
+      <h4 class="font-bold mb-2 text-lg">Print Struk</h4>
+      <p class="text-gray-600 text-sm">Memberikan bukti tanda terima ziswaf dengan melakukan print.</p>
+    </div>
+    
   </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10"></div>
 </section>
 
   <!-- Kontak -->
   <section id="kontak" class="relative">
     <img src="images/bg.png" alt="background" class="absolute w-full h-[550px] object-cover">
-    <div class="flex flex-col md:flex-row justify-items-center items-center gap-12 py-16 md:pl-16">
+    <div class="flex flex-col md:flex-row justify-items-center items-center gap-12 py-12 md:pl-16">
     <div class="flex flex-col-reverse md:flex-row items-center gap-12">
       <!-- Mock up -->
       <div class="md:w-1/2 justify-items-center mx-auto" data-aos="fade-right">
@@ -300,282 +301,111 @@ md:w-5/6 max-w-7xl bg-white shadow-xl rounded-full md:rounded-full">
   </div>
 </section>
 
-<style>
-#testimoni {
-  padding-bottom: 60px; 
-  position: relative;
-  z-index: 10; 
-}
+  <!-- Testimoni -->
+  <section class="bg-[#F6F4F1]" id="testimoni">
+  <div class="py-16">
+    <h3 class="md:text-4xl text-2xl font-bold text-[#223300] text-center mb-6">
+      Apa Kata Mereka?
+    </h3>
+    <div class="border-b border-lime-900 w-32 mx-auto mt-10 mb-10" data-aos="fade-up"></div>
+    <p class="text-center text-gray-500 mb-12">Testimonial</p>
 
-/* Pastikan navbar tetap di atas */
-header {
-  z-index: 50; 
-}
-
-#testimoni h3 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 768px) {
-  #testimoni {
-    padding-top: 80px; /* Kurangi padding untuk mobile jika navbar lebih kecil */
-  }
-}
-    @keyframes loop-scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
-
-    .scrolling {
-      animation: loop-scroll 30s linear infinite;
-    }
-
-    .paused {
-      animation-play-state: paused;
-    }
-
-    /* Kartu */
-    .testimonial-card {
-      min-width: 400px;
-      position: relative;
-      background-color: #ECE2CE;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      margin: 0 16px;
-    }
-
-    .testimonial-card::before {
-      content: '"';
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      font-size: 4rem;
-      color: #4A90E2;
-      font-weight: bold;
-      line-height: 1;
-    }
-
-    .testimonial-card.yellow::before {
-      color: #F5A623;
-    }
-
-    .testimonial-card.blue::before {
-      color: #4A90E2;
-    }
-
-    /* Ikon Profil */
-    .profile-icon {
-      width: 40px;
-      height: 40px;
-      background-color: #8B7355;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: bold;
-      margin-bottom: 4px;
-    }
-  </style>
-
-  <section class="bg-gray-50" id="testimoni">
-  <div class="bg-[#F6F4F1] py-12">
-    <h3 class="md:text-4xl text-2xl font-bold text-[#223300] text-center mb-12 relative z-10" data-aos="fade-up">Apa Kata Mereka?</h3>
-    <div class="border-b border-lime-900 w-32 mx-auto mb-12" data-aos="fade-up"></div>
     <div class="overflow-hidden w-full">
-      <div class="flex scrolling hover:paused">
-        <!-- Testimonials -->
-        <div class="flex space-x-8">
-          <div class="testimonial-card blue p-16 rounded-lg">
-            <div class="flex items-center mb-4">
-              <div class="profile-icon">👤</div>
-              <div class="ml-3">
-                <h4 class="font-bold text-gray-800">Arya</h4>
-                <h5 class="text-sm text-gray-600">DKM Al-Ikhlas</h5>
-              </div>
+      <div class="scrolling flex space-x-8">
+        
+        <!-- Card 1 -->
+        <div class="testimonial-card max-w-sm bg-white rounded-xl shadow p-8">
+          <div class="text-4xl text-gray-300 mb-4">“</div>
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            Platform ini sangat membantu pengelolaan ZISWAF di masjid kami, jadi lebih efisien dan transparan.
+          </p>
+          <div class="flex items-center space-x-3">
+            <img src="images/avatar1.png" class="w-10 h-10 rounded-full" alt="avatar">
+            <div>
+              <h4 class="font-semibold text-gray-900">Ahmad Fauzi</h4>
+              <p class="text-sm text-gray-500">Ketua DKM Masjid Al-Ikhlas</p>
             </div>
-            <p class="italic text-gray-700 leading-relaxed">
-              "Smartziswaf memungkinkan pengelolaan ziswaf secara door to door, cukup membawa Handphone dan Printer Mini Bluetooth kami membuat program jemput zakat ke rumah warga."
-            </p>
-          </div>
-          <div class="testimonial-card blue p-16 rounded-lg">
-            <div class="flex items-center mb-4">
-              <div class="profile-icon">👤</div>
-              <div class="ml-3">
-                <h4 class="font-bold text-gray-800">Arya</h4>
-                <h5 class="text-sm text-gray-600">DKM Al-Ikhlas</h5>
-              </div>
-            </div>
-            <p class="italic text-gray-700 leading-relaxed">
-              "Smartziswaf memungkinkan pengelolaan ziswaf secara door to door, cukup membawa Handphone dan Printer Mini Bluetooth kami membuat program jemput zakat ke rumah warga."
-            </p>
-          </div>
-          <div class="testimonial-card blue p-16 rounded-lg">
-            <div class="flex items-center mb-4">
-              <div class="profile-icon">👤</div>
-              <div class="ml-3">
-                <h4 class="font-bold text-gray-800">Arya</h4>
-                <h5 class="text-sm text-gray-600">DKM Al-Ikhlas</h5>
-              </div>
-            </div>
-            <p class="italic text-gray-700 leading-relaxed">
-              "Smartziswaf memungkinkan pengelolaan ziswaf secara door to door, cukup membawa Handphone dan Printer Mini Bluetooth kami membuat program jemput zakat ke rumah warga."
-            </p>
-          </div>
-          <div class="testimonial-card blue p-16 rounded-lg">
-            <div class="flex items-center mb-4">
-              <div class="profile-icon">👤</div>
-              <div class="ml-3">
-                <h4 class="font-bold text-gray-800">Arya</h4>
-                <h5 class="text-sm text-gray-600">DKM Al-Ikhlas</h5>
-              </div>
-            </div>
-            <p class="italic text-gray-700 leading-relaxed">
-              "Smartziswaf memungkinkan pengelolaan ziswaf secara door to door, cukup membawa Handphone dan Printer Mini Bluetooth kami membuat program jemput zakat ke rumah warga."
-            </p>
-          </div>
-          <div class="testimonial-card blue p-16 rounded-lg">
-            <div class="flex items-center mb-4">
-              <div class="profile-icon">👤</div>
-              <div class="ml-3">
-                <h4 class="font-bold text-gray-800">Arya</h4>
-                <h5 class="text-sm text-gray-600">DKM Al-Ikhlas</h5>
-              </div>
-            </div>
-            <p class="italic text-gray-700 leading-relaxed">
-              "Smartziswaf memungkinkan pengelolaan ziswaf secara door to door, cukup membawa Handphone dan Printer Mini Bluetooth kami membuat program jemput zakat ke rumah warga."
-            </p>
-          </div>
-          <div class="testimonial-card blue p-16 rounded-lg">
-            <div class="flex items-center mb-4">
-              <div class="profile-icon">👤</div>
-              <div class="ml-3">
-                <h4 class="font-bold text-gray-800">Arya</h4>
-                <h5 class="text-sm text-gray-600">DKM Al-Ikhlas</h5>
-              </div>
-            </div>
-            <p class="italic text-gray-700 leading-relaxed">
-              "Smartziswaf memungkinkan pengelolaan ziswaf secara door to door, cukup membawa Handphone dan Printer Mini Bluetooth kami membuat program jemput zakat ke rumah warga."
-            </p>
-          </div>
-          <div class="testimonial-card blue p-16 rounded-lg">
-            <div class="flex items-center mb-4">
-              <div class="profile-icon">👤</div>
-              <div class="ml-3">
-                <h4 class="font-bold text-gray-800">Arya</h4>
-                <h5 class="text-sm text-gray-600">DKM Al-Ikhlas</h5>
-              </div>
-            </div>
-            <p class="italic text-gray-700 leading-relaxed">
-              "Smartziswaf memungkinkan pengelolaan ziswaf secara door to door, cukup membawa Handphone dan Printer Mini Bluetooth kami membuat program jemput zakat ke rumah warga."
-            </p>
-          </div>
-          <div class="testimonial-card blue p-16 rounded-lg">
-            <div class="flex items-center mb-4">
-              <div class="profile-icon">👤</div>
-              <div class="ml-3">
-                <h4 class="font-bold text-gray-800">Arya</h4>
-                <h5 class="text-sm text-gray-600">DKM Al-Ikhlas</h5>
-              </div>
-            </div>
-            <p class="italic text-gray-700 leading-relaxed">
-              "Smartziswaf memungkinkan pengelolaan ziswaf secara door to door, cukup membawa Handphone dan Printer Mini Bluetooth kami membuat program jemput zakat ke rumah warga."
-            </p>
-          </div>
-          <div class="testimonial-card blue p-16 rounded-lg">
-            <div class="flex items-center mb-4">
-              <div class="profile-icon">👤</div>
-              <div class="ml-3">
-                <h4 class="font-bold text-gray-800">Arya</h4>
-                <h5 class="text-sm text-gray-600">DKM Al-Ikhlas</h5>
-              </div>
-            </div>
-            <p class="italic text-gray-700 leading-relaxed">
-              "Smartziswaf memungkinkan pengelolaan ziswaf secara door to door, cukup membawa Handphone dan Printer Mini Bluetooth kami membuat program jemput zakat ke rumah warga."
-            </p>
           </div>
         </div>
-        <!-- Duplicate set for seamless scrolling -->
-        <div class="flex space-x-8" aria-hidden="true">
-          <div class="testimonial-card blue p-16 rounded-lg">
-            <div class="flex items-center mb-4">
-              <div class="profile-icon">👤</div>
-              <div class="ml-3">
-                <h4 class="font-bold text-gray-800">Arya</h4>
-                <h5 class="text-sm text-gray-600">DKM Al-Ikhlas</h5>
-              </div>
+
+        <!-- Card 2 -->
+        <div class="testimonial-card max-w-sm bg-white rounded-xl shadow p-8">
+          <div class="text-4xl text-gray-300 mb-4">“</div>
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            Laporan keuangan jadi lebih mudah diakses jamaah, kepercayaan masyarakat semakin meningkat.
+          </p>
+          <div class="flex items-center space-x-3">
+            <img src="images/avatar2.png" class="w-10 h-10 rounded-full" alt="avatar">
+            <div>
+              <h4 class="font-semibold text-gray-900">Siti Rahmawati</h4>
+              <p class="text-sm text-gray-500">Bendahara Masjid Al-Huda</p>
             </div>
-            <p class="italic text-gray-700 leading-relaxed">
-              "Smartziswaf memungkinkan pengelolaan ziswaf secara door to door, cukup membawa Handphone dan Printer Mini Bluetooth kami membuat program jemput zakat ke rumah warga."
-            </p>
-          </div>
-          <div class="testimonial-card blue p-16 rounded-lg">
-            <div class="flex items-center mb-4">
-              <div class="profile-icon">👤</div>
-              <div class="ml-3">
-                <h4 class="font-bold text-gray-800">Arya</h4>
-                <h5 class="text-sm text-gray-600">DKM Al-Ikhlas</h5>
-              </div>
-            </div>
-            <p class="italic text-gray-700 leading-relaxed">
-              "Smartziswaf memungkinkan pengelolaan ziswaf secara door to door, cukup membawa Handphone dan Printer Mini Bluetooth kami membuat program jemput zakat ke rumah warga."
-            </p>
-          </div>
-          <div class="testimonial-card blue p-16 rounded-lg">
-            <div class="flex items-center mb-4">
-              <div class="profile-icon">👤</div>
-              <div class="ml-3">
-                <h4 class="font-bold text-gray-800">Arya</h4>
-                <h5 class="text-sm text-gray-600">DKM Al-Ikhlas</h5>
-              </div>
-            </div>
-            <p class="italic text-gray-700 leading-relaxed">
-              "Smartziswaf memungkinkan pengelolaan ziswaf secara door to door, cukup membawa Handphone dan Printer Mini Bluetooth kami membuat program jemput zakat ke rumah warga."
-            </p>
-          </div>
-          <div class="testimonial-card blue p-16 rounded-lg">
-            <div class="flex items-center mb-4">
-              <div class="profile-icon">👤</div>
-              <div class="ml-3">
-                <h4 class="font-bold text-gray-800">Arya</h4>
-                <h5 class="text-sm text-gray-600">DKM Al-Ikhlas</h5>
-              </div>
-            </div>
-            <p class="italic text-gray-700 leading-relaxed">
-              "Smartziswaf memungkinkan pengelolaan ziswaf secara door to door, cukup membawa Handphone dan Printer Mini Bluetooth kami membuat program jemput zakat ke rumah warga."
-            </p>
-          </div>
-          <div class="testimonial-card blue p-16 rounded-lg">
-            <div class="flex items-center mb-4">
-              <div class="profile-icon">👤</div>
-              <div class="ml-3">
-                <h4 class="font-bold text-gray-800">Arya</h4>
-                <h5 class="text-sm text-gray-600">DKM Al-Ikhlas</h5>
-              </div>
-            </div>
-            <p class="italic text-gray-700 leading-relaxed">
-              "Smartziswaf memungkinkan pengelolaan ziswaf secara door to door, cukup membawa Handphone dan Printer Mini Bluetooth kami membuat program jemput zakat ke rumah warga."
-            </p>
-          </div>
-          <div class="testimonial-card blue p-16 rounded-lg">
-            <div class="flex items-center mb-4">
-              <div class="profile-icon">👤</div>
-              <div class="ml-3">
-                <h4 class="font-bold text-gray-800">Arya</h4>
-                <h5 class="text-sm text-gray-600">DKM Al-Ikhlas</h5>
-              </div>
-            </div>
-            <p class="italic text-gray-700 leading-relaxed">
-              "Smartziswaf memungkinkan pengelolaan ziswaf secara door to door, cukup membawa Handphone dan Printer Mini Bluetooth kami membuat program jemput zakat ke rumah warga."
-            </p>
           </div>
         </div>
+
+        <!-- Card 3 -->
+        <div class="testimonial-card max-w-sm bg-white rounded-xl shadow p-8">
+          <div class="text-4xl text-gray-300 mb-4">“</div>
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            Dengan adanya platform ini, penyaluran zakat bisa lebih cepat dan tepat sasaran.
+          </p>
+          <div class="flex items-center space-x-3">
+            <img src="images/avatar3.png" class="w-10 h-10 rounded-full" alt="avatar">
+            <div>
+              <h4 class="font-semibold text-gray-900">Ustadz Hendra</h4>
+              <p class="text-sm text-gray-500">Imam Masjid Agung</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DUPLIKASI BIAR LOOP MULUS -->
+        <div class="testimonial-card max-w-sm bg-white rounded-xl shadow p-8">
+          <div class="text-4xl text-gray-300 mb-4">“</div>
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            Platform ini sangat membantu pengelolaan ZISWAF di masjid kami, jadi lebih efisien dan transparan.
+          </p>
+          <div class="flex items-center space-x-3">
+            <img src="images/avatar1.png" class="w-10 h-10 rounded-full" alt="avatar">
+            <div>
+              <h4 class="font-semibold text-gray-900">Ahmad Fauzi</h4>
+              <p class="text-sm text-gray-500">Ketua DKM Masjid Al-Ikhlas</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card max-w-sm bg-white rounded-xl shadow p-8">
+          <div class="text-4xl text-gray-300 mb-4">“</div>
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            Laporan keuangan jadi lebih mudah diakses jamaah, kepercayaan masyarakat semakin meningkat.
+          </p>
+          <div class="flex items-center space-x-3">
+            <img src="images/avatar2.png" class="w-10 h-10 rounded-full" alt="avatar">
+            <div>
+              <h4 class="font-semibold text-gray-900">Siti Rahmawati</h4>
+              <p class="text-sm text-gray-500">Bendahara Masjid Al-Huda</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card max-w-sm bg-white rounded-xl shadow p-8">
+          <div class="text-4xl text-gray-300 mb-4">“</div>
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            Dengan adanya platform ini, penyaluran zakat bisa lebih cepat dan tepat sasaran.
+          </p>
+          <div class="flex items-center space-x-3">
+            <img src="images/avatar3.png" class="w-10 h-10 rounded-full" alt="avatar">
+            <div>
+              <h4 class="font-semibold text-gray-900">Ustadz Hendra</h4>
+              <p class="text-sm text-gray-500">Imam Masjid Agung</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
+
 
   <!-- CTA -->
 <section class="bg-gradient-to-r from-[#4B5D16] to-[#223300] text-white text-center py-16 sm:pd-4 rounded-b-3xl" id="kontak">
