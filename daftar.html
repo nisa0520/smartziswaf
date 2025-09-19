@@ -14,22 +14,25 @@
 
 <!-- Navbar -->
 <header class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-11/12 
-md:w-5/6 max-w-7xl bg-white shadow-xl rounded-full md:rounded-full">
+md:w-5/6 max-w-7xl bg-white/70 backdrop-blur-lg shadow-lg rounded-full">
   <nav class="flex justify-between items-center p-4">
-    
+    <!-- Logo -->
     <div class="flex items-center">
       <img src="images/logo.png" alt="logo" class="h-8">
     </div>
-    <ul class="hidden md:flex gap-8 text-sm font-medium justify-items-center items-center">
-      <li><a href="#tentang" class="hover:text-[#E45C10] transition">Tentang Kami</a></li>
-      <li><a href="#fitur" class="hover:text-[#E45C10] transition">Fitur Aplikasi</a></li>
-      <li><a href="#kontak" class="hover:text-[#E45C10] transition">Kontak Kami</a></li>
-      <li><a href="#testimoni" class="hover:text-[#E45C10] transition">Testimoni</a></li>
-      <button class="bg-gradient-to-r from-[#4B5D16] to-[#223300] text-white p-4 rounded-full 
-      font-semibold hover:scale-105 transition-transform">
-        Sign In
-      </button>
+    <!-- Menu -->
+    <ul class="hidden lg:flex gap-8 text-sm font-medium items-center absolute left-1/2 transform -translate-x-1/2">
+      <li><a href="#tentang" class="hover:text-[#E45C10] transition duration-300 whitespace-nowrap">Tentang Kami</a></li>
+      <li><a href="#fitur" class="hover:text-[#E45C10] transition duration-300 whitespace-nowrap">Fitur Aplikasi</a></li>
+      <li><a href="#kontak" class="hover:text-[#E45C10] transition duration-300 whitespace-nowrap">Kontak Kami</a></li>
+      <li><a href="#testimoni" class="hover:text-[#E45C10] transition duration-300">Testimoni</a></li>
+      <li><a href="#faq" class="hover:text-[#E45C10] transition duration-300">FAQ</a></li>
     </ul>
+    <button class="bg-gradient-to-r from-[#4B5D16] to-[#223300] text-white px-5 py-2 rounded-full 
+      font-semibold hover:scale-105 transition-transform">
+      <a href="sign-in.html">Sign In</a>
+    </button>
+  </nav>
 
     <!-- Hamburger Menu (Mobile) -->
     <div class="md:hidden">
@@ -64,14 +67,14 @@ md:w-5/6 max-w-7xl bg-white shadow-xl rounded-full md:rounded-full">
 </header>
 
   <!-- Hero Section -->
-<div class="flex flex-col justify-center px-6 py-12 lg:px-8 bg-[#F6F4F1] pt-32">
+<div class="flex flex-col justify-center px-6 py-12 lg:px-8 bg-[#F5F6FA] pt-32">
   <div class="sm:mx-auto sm:w-full sm:max-w-4xl">
     <img src="images/logo.png" alt="Smart ZISWAF" class="mx-auto h-16 w-auto" />
     <h2 class="mt-10 text-center text-4xl font-bold tracking-tight text-black">Pendaftaran Aplikasi Pengelolaan <span class="text-[#29B34B]">ZIS</span><span class="text-[#F58220]">WAF</span> Masjid Berbasis Online</h2>
     <p class="mt-4 text-center text-lg text-gray-500">Silakan daftarkan masjid Anda untuk mendapatkan link aplikasi dan akun secara gratis dan mudah. Mohon lengkapi data di bawah ini dengan benar.</p>
   </div>
 
-  <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-4xl bg-[#ECE2CE] p-6 rounded-lg shadow-md">
+  <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-4xl bg-white shadow-lg p-6 rounded-lg">
     <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div>
         <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
@@ -166,26 +169,41 @@ md:w-5/6 max-w-7xl bg-white shadow-xl rounded-full md:rounded-full">
 </a>
 
   <!-- Footer -->
-  <footer class="bg-[#F6F4F1] py-20 pb-16">
-  <div class="container mx-auto px-6">
-    <div class="flex flex-col md:flex-row justify-between items-center">
+  <footer class="relative overflow-hidden text-white">
+  <!-- Background Masjid -->
+  <div class="absolute inset-x-0 bottom-0 -z-10">
+    <img src="images/bg2.png" alt="background" class="w-full object-cover">
+  </div>
+
+  <div class="container mx-auto px-6 py-12">
+    <!-- Top Section -->
+    <div class="flex flex-col md:flex-row justify-between items-center md:items-start">
+      <!-- Logo & Deskripsi -->
       <div class="text-center md:text-left mb-6 md:mb-0">
         <img src="images/logo.png" alt="SMARTZISWAF Logo" class="h-12 mb-2 mx-auto md:mx-0">
-        <p class="text-sm">Platform Digital Terpercaya untuk Pengelolaan ZISWAF Masjid.</p>
+        <p class="text-sm text-[#4B5D16]">Platform Digital Terpercaya untuk</p> 
+          <p class="text-sm text-[#4B5D16]">Pengelolaan ZISWAF Masjid.</p>
       </div>
-      
+
+      <!-- Menu -->
       <nav class="text-sm font-medium">
-        <ul class="flex flex-col md:flex-row gap-4 md:gap-8">
-          <li><a href="#tentang" class="hover:text-[#E45C10] transition-colors">Tentang Kami</a></li>
-          <li><a href="#fitur" class="hover:text-[#E45C10] transition-colors">Fitur Aplikasi</a></li>
-          <li><a href="#kontak" class="hover:text-[#E45C10] transition-colors">Kontak Kami</a></li>
-          <li><a href="#testimoni" class="hover:text-[#E45C10] transition-colors">Testimoni</a></li>
+        <ul class="flex flex-col md:flex-row gap-4 md:gap-8 text-center md:text-left">
+          <li><a href="#tentang" class="text-[#4B5D16] hover:text-[#E45C10] transition-colors">Tentang Kami</a></li>
+          <li><a href="#fitur" class="text-[#4B5D16] hover:text-[#E45C10] transition-colors">Fitur Aplikasi</a></li>
+          <li><a href="#kontak" class="text-[#4B5D16] hover:text-[#E45C10] transition-colors">Kontak Kami</a></li>
+          <li><a href="#testimoni" class="text-[#4B5D16] hover:text-[#E45C10] transition-colors">Testimoni</a></li>
+          <li><a href="#faq" class="text-[#4B5D16] hover:text-[#E45C10] transition-colors">FAQ</a></li>
         </ul>
       </nav>
     </div>
-    <div class="flex flex-col md:flex-row justify-between items-center mt-8 text-sm border-t border-lime-900 pt-6">
-      <p>© 2025 SMARTZISWAF. All rights reserved.</p>
-      <p class="mt-4 md:mt-0">Powered by <img src="images/logo-4vm.svg" alt="4VM" class="inline-block h-6"></p>
+
+    <!-- Bottom Section -->
+    <div class="flex flex-col md:flex-row justify-between items-center mt-8 text-sm border-t border-white/30 pt-6">
+      <p>© 2025 <span class="font-bold">SMARTZISWAF</span> All Rights Reserved.</p>
+      <p class="mt-4 md:mt-0 flex items-center">
+        Powered by 
+        <img src="images/logo-4vm.svg" alt="4VM" class="inline-block h-6 ml-2">
+      </p>
     </div>
   </div>
 </footer>

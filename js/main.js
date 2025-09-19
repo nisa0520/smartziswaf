@@ -123,3 +123,40 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   }).mount();
 });
+
+        // Counter animation function
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                
+                // Format number with + sign
+                if (target >= 1000) {
+                    element.textContent = Math.floor(current).toLocaleString() + '+';
+                } else {
+                    element.textContent = Math.floor(current) + '+';
+                }
+            }, 20);
+        }
+
+        // Initialize counters when page loads
+        window.addEventListener('load', () => {
+            const counters = [
+                { element: document.querySelectorAll('h4')[0], target: 65 },
+                { element: document.querySelectorAll('h4')[1], target: 10 },
+                { element: document.querySelectorAll('h4')[2], target: 40 },
+                { element: document.querySelectorAll('h4')[3], target: 50 },
+                { element: document.querySelectorAll('h4')[4], target: 45 },
+                { element: document.querySelectorAll('h4')[5], target: 5000 },
+                { element: document.querySelectorAll('h4')[6], target: 2000 }
+            ];
+
+            counters.forEach(counter => {
+                animateCounter(counter.element, counter.target);
+            });
+        });
