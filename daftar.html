@@ -14,57 +14,63 @@
 <header class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-11/12 
 md:w-5/6 max-w-7xl bg-white/70 backdrop-blur-lg shadow-lg rounded-full">
   <nav class="flex justify-between items-center p-4">
+    
     <!-- Logo -->
     <div class="flex items-center">
-  <a href="index.html">
-    <img src="images/logo.png" alt="logo" class="h-8">
-  </a>
-</div>
-    <!-- Menu -->
+      <img src="images/logo.png" alt="logo" class="h-8">
+    </div>
+
+    <!-- Menu (Desktop) -->
     <ul class="hidden lg:flex gap-8 text-sm font-medium items-center absolute left-1/2 transform -translate-x-1/2">
-      <li><a href="index.html" class="hover:text-[#E45C10] transition duration-300 whitespace-nowrap">Tentang Kami</a></li>
+      <li><a href="#tentang" class="hover:text-[#E45C10] transition duration-300 whitespace-nowrap">Tentang Kami</a></li>
       <li><a href="#fitur" class="hover:text-[#E45C10] transition duration-300 whitespace-nowrap">Fitur Aplikasi</a></li>
       <li><a href="#kontak" class="hover:text-[#E45C10] transition duration-300 whitespace-nowrap">Kontak Kami</a></li>
       <li><a href="#testimoni" class="hover:text-[#E45C10] transition duration-300">Testimoni</a></li>
       <li><a href="#faq" class="hover:text-[#E45C10] transition duration-300">FAQ</a></li>
     </ul>
-    <button class="bg-gradient-to-r from-[#4B5D16] to-[#223300] text-white px-5 py-2 rounded-full 
+
+    <!-- Sign In (Desktop) -->
+    <button class="hidden md:block bg-gradient-to-r from-[#4B5D16] to-[#223300] text-white px-5 py-2 rounded-full 
       font-semibold hover:scale-105 transition-transform">
       <a href="sign-in.html">Sign In</a>
     </button>
-  </nav>
 
-    <!-- Hamburger Menu (Mobile) -->
+    <!-- Hamburger (Mobile) -->
     <div class="md:hidden">
       <button id="menu-btn" class="text-[#223300] focus:outline-none">
-        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <!-- Hamburger Icon -->
+        <svg id="icon-hamburger" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M4 6h16M4 12h16m-7 6h7" />
         </svg>
+        <!-- Close Icon -->
+        <svg id="icon-close" class="h-6 w-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18L18 6M6 6l12 12" />
+        </svg>
       </button>
     </div>
   </nav>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="fixed top-0 left-0 w-full bg-white shadow-lg 
-  z-40 opacity-0 max-h-0 overflow-hidden transition-all duration-300 ease-in-out md:hidden">
-    <div class="flex flex-col space-y-6 p-6 pt-20">
-      <button id="close-btn" class="absolute top-6 right-6 text-[#223300] focus:outline-none">
-        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-      <a href="#tentang" class="text-lg hover:text-[#E45C10] transition">Tentang Kami</a>
-      <a href="#fitur" class="text-lg hover:text-[#E45C10] transition">Fitur Aplikasi</a>
-      <a href="#kontak" class="text-lg hover:text-[#E45C10] transition">Kontak Kami</a>
-      <a href="#testimoni" class="text-lg hover:text-[#E45C10] transition">Testimoni</a>
-      <button class="bg-gradient-to-r from-[#4B5D16] to-[#223300] text-white p-4 rounded-full 
-      font-semibold shadow-lg hover:scale-105 transition-transform">
-        Sign In
-      </button>
-    </div>
-  </div>
 </header>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed top-0 left-0 w-full bg-white shadow-lg 
+z-40 opacity-0 max-h-0 overflow-hidden transition-all duration-300 ease-in-out md:hidden">
+  <div class="flex flex-col space-y-6 p-6 pt-20">
+    <!-- Links -->
+    <a href="#tentang" class="text-lg hover:text-[#E45C10] transition">Tentang Kami</a>
+    <a href="#fitur" class="text-lg hover:text-[#E45C10] transition">Fitur Aplikasi</a>
+    <a href="#kontak" class="text-lg hover:text-[#E45C10] transition">Kontak Kami</a>
+    <a href="#testimoni" class="text-lg hover:text-[#E45C10] transition">Testimoni</a>
+    <a href="#faq" class="text-lg hover:text-[#E45C10] transition">FAQ</a>
+
+    <!-- Sign In (Mobile menu) -->
+    <button class="bg-gradient-to-r from-[#4B5D16] to-[#223300] text-white px-5 py-2 rounded-full 
+    font-semibold hover:scale-105 transition-transform">
+      <a href="sign-in.html">Sign In</a>
+    </button>
+  </div>
+</div>
 
   <!-- Hero Section -->
 <div class="flex flex-col justify-center px-6 py-12 lg:px-8 bg-[#F5F6FA] pt-32">
