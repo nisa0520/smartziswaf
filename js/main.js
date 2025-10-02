@@ -31,7 +31,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
-      // Hide mobile menu if open (if applicable)
       const mobileMenu = document.getElementById('mobile-menu');
       if (mobileMenu && mobileMenu.classList.contains('translate-x-0')) {
         mobileMenu.classList.remove('translate-x-0');
@@ -78,28 +77,43 @@ counters.forEach(counter => observer.observe(counter));
 
 // Mobile Menu Toggle
 const menuBtn = document.getElementById('menu-btn');
-  const closeBtn = document.getElementById('close-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenu = document.getElementById('mobile-menu');
 
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.add('opacity-100', 'max-h-[500px]');
-    mobileMenu.classList.remove('opacity-0', 'max-h-0');
-  });
+// Icon Elements
+const iconHamburger = document.getElementById('icon-hamburger');
+const iconClose = document.getElementById('icon-close');
 
-  closeBtn.addEventListener('click', () => {
-    mobileMenu.classList.remove('opacity-100', 'max-h-[500px]');
-    mobileMenu.classList.add('opacity-0', 'max-h-0');
-  });
+menuBtn.addEventListener('click', () => {
+    const isMenuClosed = mobileMenu.classList.contains('opacity-0');
 
-  // Tutup menu saat klik link di mobile
-  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    if (isMenuClosed) {
+        mobileMenu.classList.add('opacity-100', 'max-h-screen'); // Ganti max-h-[500px] dengan max-h-screen untuk fleksibilitas
+        mobileMenu.classList.remove('opacity-0', 'max-h-0');
+
+        iconHamburger.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+    } else {
+        mobileMenu.classList.remove('opacity-100', 'max-h-screen');
+        mobileMenu.classList.add('opacity-0', 'max-h-0');
+        iconHamburger.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+    }
+});
+
+document.querySelectorAll('#mobile-menu a').forEach(link => {
     link.addEventListener('click', () => {
-      mobileMenu.classList.remove('opacity-100', 'max-h-[500px]');
-      mobileMenu.classList.add('opacity-0', 'max-h-0');
+        mobileMenu.classList.remove('opacity-100', 'max-h-screen');
+        mobileMenu.classList.add('opacity-0', 'max-h-0');
+        iconHamburger.classList.remove('hidden');
+        iconClose.classList.add('hidden');
     });
-  });
+});
 
-  // Splide Initialization for Testimonial Carousel
+document.getElementById('#mobile-menu a').addEventListener('click', () => {
+    window.location.href = 'sign-in.html';
+});
+
+// Splide Initialization for Testimonial Carousel
 document.addEventListener('DOMContentLoaded', () => {
   new Splide('#testimonialSplide', {
     type: 'loop',
@@ -124,39 +138,39 @@ document.addEventListener('DOMContentLoaded', () => {
   }).mount();
 });
 
-        // Counter animation function
-        function animateCounter(element, target) {
-            let current = 0;
-            const increment = target / 100;
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
+// Counter animation function
+function animateCounter(element, target) {
+  let current = 0;
+  const increment = target / 100;
+  const timer = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      current = target;
+      clearInterval(timer);
+    }
                 
-                // Format number with + sign
-                if (target >= 1000) {
-                    element.textContent = Math.floor(current).toLocaleString() + '+';
-                } else {
-                    element.textContent = Math.floor(current) + '+';
-                }
-            }, 20);
-        }
+// Format number with + sign
+if (target >= 1000) {
+  element.textContent = Math.floor(current).toLocaleString() + '+';
+  } else {
+    element.textContent = Math.floor(current) + '+';
+  }
+}, 20);
+}
 
-        // Initialize counters when page loads
-        window.addEventListener('load', () => {
-            const counters = [
-                { element: document.querySelectorAll('h4')[0], target: 65 },
-                { element: document.querySelectorAll('h4')[1], target: 10 },
-                { element: document.querySelectorAll('h4')[2], target: 40 },
-                { element: document.querySelectorAll('h4')[3], target: 50 },
-                { element: document.querySelectorAll('h4')[4], target: 45 },
-                { element: document.querySelectorAll('h4')[5], target: 5000 },
-                { element: document.querySelectorAll('h4')[6], target: 2000 }
-            ];
+// Initialize counters when page loads
+window.addEventListener('load', () => {
+const counters = [
+  { element: document.querySelectorAll('h4')[0], target: 65 },
+  { element: document.querySelectorAll('h4')[1], target: 10 },
+  { element: document.querySelectorAll('h4')[2], target: 40 },
+  { element: document.querySelectorAll('h4')[3], target: 50 },
+  { element: document.querySelectorAll('h4')[4], target: 45 },
+  { element: document.querySelectorAll('h4')[5], target: 5000 },
+  { element: document.querySelectorAll('h4')[6], target: 2000 }
+];
 
-            counters.forEach(counter => {
-                animateCounter(counter.element, counter.target);
-            });
-        });
+counters.forEach(counter => {
+  animateCounter(counter.element, counter.target);
+  });
+});

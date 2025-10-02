@@ -4,7 +4,7 @@ body {
 
 @keyframes loop-scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* cukup setengah karena ada duplikat */
+  100% { transform: translateX(-50%); }
 }
 
 .scrolling {
@@ -19,8 +19,3 @@ body {
 .testimonial-card {
   flex: 0 0 auto;
 }
-
-/* 
-.bg-dark {
-@apply bg-gray-900;
-} */
